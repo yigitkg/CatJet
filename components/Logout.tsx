@@ -9,6 +9,7 @@ const Logout: React.FC<LogoutProps> = ({ onLogout }) => {
   const handleLogout = () => {
     Cookies.remove('loggedIn');
     onLogout();
+    console.log('clicked logout');
   };
 
   return (
@@ -16,7 +17,7 @@ const Logout: React.FC<LogoutProps> = ({ onLogout }) => {
       onClick={handleLogout}
       className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
     >
-      Çıkış yap
+      Logout
     </button>
   );
 };

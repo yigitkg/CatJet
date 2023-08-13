@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import Login from './Login';
-import Logout from './Logout';
+import HomePage from './HomePage';
 
-const Entry: React.FC = () => {
+const MainPage: React.FC = () => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Entry: React.FC = () => {
   return (
     <div className="overflow-hidden flex justify-center items-center bg-gray-100 h-screen">
       {loggedIn ? (
-        <Logout onLogout={() => setLoggedIn(false)} />
+        <HomePage onLogout={() => setLoggedIn(false)} />
       ) : (
         <Login onLoginSuccess={() => setLoggedIn(true)} />
       )}
@@ -22,4 +22,4 @@ const Entry: React.FC = () => {
   );
 };
 
-export default Entry;
+export default MainPage;

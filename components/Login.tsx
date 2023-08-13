@@ -12,11 +12,9 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   const handleLogin = () => {
-    // Burada sabit kullanıcı adı ve şifreyi kontrol edin
-    if (username === 'kullanici' && password === 'sifre') {
-      // Giriş başarılı
+    if (username === 'username' && password === 'password') {
       setLoggedIn(true);
-      Cookies.set('loggedIn', 'true'); // Oturum anahtarını çereze kaydet
+      Cookies.set('loggedIn', 'true');
       onLoginSuccess();
     }
   };
@@ -25,20 +23,20 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
     <div className="min-h-screen flex justify-center items-center">
       {loggedIn ? (
         <div className="text-center">
-          <p>Hoş geldiniz, {username}!</p>
+          <p>Welcome, {username}!</p>
         </div>
       ) : (
         <div className="text-center">
           <input
             type="text"
-            placeholder="Kullanıcı Adı"
+            placeholder="UserName"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             className="mb-2 p-2 border rounded"
           />
           <input
             type="password"
-            placeholder="Şifre"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="mb-2 p-2 border rounded"
@@ -47,7 +45,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
             onClick={handleLogin}
             className="px-4 py-2 bg-green-500 text-white rounded"
           >
-            Giriş yap
+            Login
           </button>
         </div>
       )}
