@@ -20,30 +20,30 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center">
+    <div className="min-h-screen flex flex-col justify-center items-center p-4">
       {loggedIn ? (
-        <div className="text-center">
-          <p>Welcome, {username}!</p>
+        <div className="text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+          <p className="text-lg">Welcome, {username}!</p>
         </div>
       ) : (
-        <div className="text-center">
+        <div className="text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
           <input
             type="text"
             placeholder="UserName"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="mb-2 p-2 border rounded"
+            className="w-full mb-2 p-3 border rounded"
           />
           <input
             type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="mb-2 p-2 border rounded"
+            className="w-full mb-2 p-3 border rounded"
           />
           <button
             onClick={handleLogin}
-            className="px-4 py-2 bg-green-500 text-white rounded"
+            className="w-full px-4 py-2 mt-2 bg-green-500 text-white rounded"
           >
             Login
           </button>

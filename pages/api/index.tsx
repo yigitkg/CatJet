@@ -5,17 +5,19 @@ const CatDisplay: FC = () => {
   const { catImage, fetchCatImage } = useCatImage();
 
   return (
-    <main className="overflow-hidden flex flex-col justify-center items-center bg-gray-100 h-screen">
+    <main className="flex flex-col items-center p-4">
       {catImage && (
-        <img
-          src={catImage}
-          alt="Random Cat"
-          className="mb-4 w-64 h-64 object-cover rounded shadow"
-        />
+        <div className="relative w-3/4 h-3/4 sm:w-1/2 sm:h-1/2 lg:w-1/2 lg:h-1/2 xl:w-2/3 xl:h-2/3 2xl:w-3/4 2xl:h-3/4 rounded shadow mb-4 overflow-hidden">
+          <img
+            src={catImage}
+            alt="Random Cat"
+            className="w-full h-full object-cover"
+          />
+        </div>
       )}
       <button
         onClick={fetchCatImage}
-        className="px-4 py-2 bg-blue-500 text-white rounded"
+        className="mt-4 w-full sm:w-auto px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
       >
         Change the Image
       </button>

@@ -7,12 +7,16 @@ interface HomePageProps {
 
 const HomePage: React.FC<HomePageProps> = ({ onLogout }) => {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-slate-600">
-      <div className="w-2/3 bg-gray-300 p-4 rounded-lg mb-4 shadow-md">
-        <h1 className="text-xl font-bold mb-2">Home Page</h1>
+    <div className="min-h-screen flex flex-col justify-center items-center px-4 sm:px-8 md:px-16">
+      <div className="text-center space-y-6">
+        <h1 className="text-2xl sm:text-4xl md:text-6xl">
+          Welcome to cat Dojo
+        </h1>
         <CatDisplay />
       </div>
-      <Logout onLogout={() => onLogout()} />
+      <div className="mt-6">
+        <Logout onLogout={() => onLogout()} />
+      </div>
     </div>
   );
 };
