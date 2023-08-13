@@ -12,7 +12,7 @@ const MainPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden flex justify-center items-center bg-gray-100 h-screen">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
       {loggedIn ? (
         <HomePage onLogout={() => setLoggedIn(false)} />
       ) : (
