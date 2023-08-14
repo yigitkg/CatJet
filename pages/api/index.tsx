@@ -1,17 +1,27 @@
 import useCatImage from '@/hooks/useCatImage';
-import { FC } from 'react';
+import { FC, useState, useEffect } from 'react';
 
 const CatDisplay: FC = () => {
   const { catImage, fetchCatImage } = useCatImage();
+  const [opacityClass, setOpacityClass] = useState('opacity-0');
+
+  useEffect(() => {
+    setOpacityClass('opacity-0');
+    const timer = setTimeout(() => {
+      setOpacityClass('opacity-100');
+    }, 1300);
+    return () => clearTimeout(timer);
+  }, [catImage]);
 
   return (
     <main className="flex flex-col items-center p-4">
       {catImage && (
-        <div className="relative w-3/4 h-3/4 sm:w-1/2 sm:h-1/2 lg:w-1/2 lg:h-1/2 xl:w-2/3 xl:h-2/3 2xl:w-3/4 2xl:h-3/4 rounded shadow mb-4 overflow-hidden">
+        <div className="relative w-[66.67vw] h-[66.67vh] rounded shadow">
           <img
             src={catImage}
             alt="Random Cat"
-            className="w-full h-full object-cover"
+            className={`transition-opacity duration-1000 ${opacityClass} absolute top-0 left-0 w-full h-full rounded`}
+            style={{ objectFit: 'contain' }}
           />
         </div>
       )}
