@@ -1,9 +1,13 @@
+'use client';
 import MainPage from '@/components';
+import { RecoilRoot } from 'recoil';
 
-export default function Home() {
+function App() {
   return (
-    <main>
+    <RecoilRoot>
       <MainPage />
-    </main>
+    </RecoilRoot>
   );
 }
+
+export default App;

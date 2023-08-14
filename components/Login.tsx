@@ -1,15 +1,18 @@
-'use client'; // This is a client component 👈🏽
+'use client';
 import { useState } from 'react';
 import Cookies from 'js-cookie';
+import { useSetRecoilState, useRecoilValue } from 'recoil'; // Importing the hooks
+import { loggedInState } from '@/store/auth';
 
 interface LoginProps {
   onLoginSuccess: () => void;
 }
 
 const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
+  const setLoggedIn = useSetRecoilState(loggedInState);
+  const loggedIn = useRecoilValue(loggedInState); // Fetch the loggedIn value from Recoil
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [loggedIn, setLoggedIn] = useState(false);
 
   const handleLogin = () => {
     if (username === 'username' && password === 'password') {

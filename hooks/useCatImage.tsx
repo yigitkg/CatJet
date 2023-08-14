@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useRecoilState } from 'recoil';
+import { catImageState } from '@/store/catImage';
 
 const useCatImage = () => {
-  const [catImage, setCatImage] = useState<string | null>(null);
+  const [catImage, setCatImage] = useRecoilState(catImageState);
 
   const fetchCatImage = async () => {
     try {
