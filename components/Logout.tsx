@@ -4,9 +4,19 @@ interface LogoutProps {
   onLogout: () => void;
 }
 
+/**
+ * Logout component
+ *
+ * @param {Object} props - The component props
+ * @param {Function} props.onLogout - The logout callback function
+ * @returns {JSX.Element} - The logout button component
+ */
 const Logout: React.FC<LogoutProps> = ({ onLogout }) => {
+  /**
+   * Handle logout click event
+   */
   const handleLogout = () => {
-    Cookies.remove('loggedIn');
+    Cookies.remove('loggedIn', { secure: true });
     onLogout();
   };
 

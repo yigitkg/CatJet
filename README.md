@@ -1,34 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CatJet: A Next.js Cat Image Viewer
 
-## Getting Started
+![CatJet Banner](URL_TO_YOUR_BANNER_IMAGE_IF_YOU_HAVE_ONE)
 
-First, run the development server:
+CatJet is a beautifully crafted web application powered by Next.js. Aimed at providing cat enthusiasts with a dose of feline beauty whenever they need it, the app fetches and displays random cat images on demand.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Effortless Cat Viewing**: With just a click, indulge in a visual treat of random cat images.
+- **Modular Design**: Uses a custom hook (`useCatImage`) for fetching and managing cat images.
+- **Modern Styling**: Integrated with Tailwind CSS, the app boasts a modern and responsive design.
+- **State-of-the-Art State Management**: Uses Recoil for managing application state, offering a predictable and consistent experience.
+- **Strongly Typed**: The application is built using TypeScript, guaranteeing type safety and ease of debugging.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Setup & Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Prerequisites
 
-## Learn More
+- Node.js (v14 or newer)
+- npm (v6 or newer)
 
-To learn more about Next.js, take a look at the following resources:
+### Installation Steps
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the Repository**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/yigitkg/CatJet.git
+   ```
 
-## Deploy on Vercel
+2. **Environment Setup**:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Copy the example environment file and make the necessary configurations:
+   Copy code
+   cp .env.local.example .env.local
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   Then, edit .env.local and add your API Key:
+
+   ```bash
+   NEW_CAT_API_KEY = [Your API Key]
+   ```
+
+   Launch the Development Server
+
+   ```bash
+   npm i
+   npm run dev
+   ```
+
+   Now, open your browser and navigate to http://localhost:3000 to see CatJet in action!
+
+## 📘 Documentation
+
+    Copy the example environment file and make the necessary configurations:
+    Copy code
+    cp .env.local.example .env.local
+
+## 🙌 Contributing
+
+    Fork the repository.
+    Make your changes.
+    Submit a pull request with a detailed description of the changes.
+    For significant modifications, it's always a good idea to open an issue first to discuss potential enhancements.
+
+## 📜 License
+
+    CatJet is open-source software licensed under the MIT License.
+
+## 📞 Contact & Support
+
+    Should you have any inquiries, issues, or suggestions, feel free to open an issue, or reach out to us directly at yigitkg@gmail.com.

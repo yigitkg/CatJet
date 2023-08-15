@@ -6,11 +6,19 @@ import HomePage from './HomePage';
 import { loggedInState } from '@/store/auth';
 import { useRecoilState } from 'recoil'; // <-- Importing the hook here
 
+/**
+ * This is the main page component.
+ * It displays either the home page or the login page based on the logged in state.
+ */
 const MainPage: React.FC = () => {
   const [loggedIn, setLoggedIn] = useRecoilState(loggedInState);
 
+  /**
+   * useEffect hook to check if the user is logged in when the component mounts.
+   * It updates the logged in state based on the 'loggedIn' cookie value.
+   */
   useEffect(() => {
-    setLoggedIn(!!Cookies.get('loggedIn'));
+    setLoggedIn(Cookies.get('loggedIn') === 'true');
   }, []);
 
   return (
