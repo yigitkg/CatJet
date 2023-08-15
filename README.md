@@ -1,6 +1,7 @@
 # CatJet: A Next.js Cat Image Viewer
 
 If you wanna visit go to https://catjet.netlify.app/
+To simplify things, login page is for a demonstration. Enter "username" and "password" as credentials and enter the website.
 
 ![CatJet Banner](https://raw.githubusercontent.com/yigitkg/CatJet/main/CatJetDisplayImage.png?token=GHSAT0AAAAAACGDIZBVNZF2NROZIFNUGJCKZG3YZWA)
 
