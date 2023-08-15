@@ -1,6 +1,6 @@
 # CatJet: A Next.js Cat Image Viewer
 
-If you wanna visit go to (https://catjet.netlify.app/)
+If you wanna visit go to https://catjet.netlify.app/
 
 ![CatJet Banner](https://raw.githubusercontent.com/yigitkg/CatJet/main/CatJetDisplayImage.png?token=GHSAT0AAAAAACGDIZBVNZF2NROZIFNUGJCKZG3YZWA)
 
