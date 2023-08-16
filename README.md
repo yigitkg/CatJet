@@ -1,6 +1,9 @@
 # CatJet: A Next.js Cat Image Viewer
 
-![CatJet Banner](URL_TO_YOUR_BANNER_IMAGE_IF_YOU_HAVE_ONE)
+If you wanna visit go to https://catjet.netlify.app/
+To simplify things, login page is for a demonstration. Enter "username" and "password" as credentials and enter the website.
+
+![CatJet Banner](https://raw.githubusercontent.com/yigitkg/CatJet/main/CatJetDisplayImage.png?token=GHSAT0AAAAAACGDIZBVNZF2NROZIFNUGJCKZG3YZWA)
 
 CatJet is a beautifully crafted web application powered by Next.js. Aimed at providing cat enthusiasts with a dose of feline beauty whenever they need it, the app fetches and displays random cat images on demand.
 
