@@ -25,7 +25,6 @@ const CatDisplay: FC = () => {
     setLoading(true);
     // Fetch the new image
     await fetchCatImage();
-    console.log('fetchCatImage');
 
     // Wait for the fade out animation to complete
     await new Promise((resolve) => setTimeout(resolve, 800));
